@@ -1,0 +1,17 @@
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.BL.deps.json
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.BL.dll
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.BL.pdb
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.Core.dll
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.DAL.dll
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.DAL.pdb
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\bin\Debug\net8.0\Kurdemir.Core.pdb
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.csproj.AssemblyReference.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.AssemblyInfoInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.AssemblyInfo.cs
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.csproj.CoreCompileInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.9A6E0132.Up2Date
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.dll
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\refint\Kurdemir.BL.dll
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\Kurdemir.BL.pdb
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.BL\obj\Debug\net8.0\ref\Kurdemir.BL.dll

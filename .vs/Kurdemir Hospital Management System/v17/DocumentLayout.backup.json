@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{128AF20A-B2D9-46D8-B811-643E4FAC5A0B}|Kurdemir.BL\\Kurdemir.BL.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir.bl\\services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128AF20A-B2D9-46D8-B811-643E4FAC5A0B}|Kurdemir.BL\\Kurdemir.BL.csproj|solutionrelative:kurdemir.bl\\services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EFDB5E-CC24-4B3F-9A50-CEC7F46ADB54}|Kurdemir.DAL\\Kurdemir.DAL.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir.dal\\repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EFDB5E-CC24-4B3F-9A50-CEC7F46ADB54}|Kurdemir.DAL\\Kurdemir.DAL.csproj|solutionrelative:kurdemir.dal\\repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EFDB5E-CC24-4B3F-9A50-CEC7F46ADB54}|Kurdemir.DAL\\Kurdemir.DAL.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir.dal\\repositories\\abstractions\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EFDB5E-CC24-4B3F-9A50-CEC7F46ADB54}|Kurdemir.DAL\\Kurdemir.DAL.csproj|solutionrelative:kurdemir.dal\\repositories\\abstractions\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.BL\\Services\\Implementations\\AccountService.cs",
+              "RelativeDocumentMoniker": "Kurdemir.BL\\Services\\Implementations\\AccountService.cs",
+              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.BL\\Services\\Implementations\\AccountService.cs",
+              "RelativeToolTip": "Kurdemir.BL\\Services\\Implementations\\AccountService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:20:28.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Kurdemir.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeToolTip": "Kurdemir.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:20:14.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.DAL\\Repositories\\Abstractions\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Kurdemir.DAL\\Repositories\\Abstractions\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.DAL\\Repositories\\Abstractions\\IGenericRepository.cs",
+              "RelativeToolTip": "Kurdemir.DAL\\Repositories\\Abstractions\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T15:20:12.137Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

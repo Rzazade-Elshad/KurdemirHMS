@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Kurdemir.MVC.props" />
+</Project>
