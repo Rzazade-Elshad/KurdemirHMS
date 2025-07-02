@@ -25,66 +25,46 @@ public class DepartmentService(IDepartmentRepository departmentRepository) :IDep
         await _departmentRepo.CreateAsync(department);
         await _departmentRepo.SaveChangeAsync();
     }
-    public async Task DepartmantUpdateAsync(DepartmentUpdateCreateVm departmentUpdateVm )
+    public async Task DepartmantUpdateAsync(DepartmentUpdateReadVm departmentUpdateVm )
     {
         Department department = new Department() 
         {
             Id= departmentUpdateVm.Id,
             Name= departmentUpdateVm.Name,
-            IsDeleted= departmentUpdateVm.IsDeleted,
-            CreateTime=departmentUpdateVm.Createtime,
         };
         _departmentRepo.Update(department);
         await _departmentRepo.SaveChangeAsync();
     }
-    public async Task<DepartmentUpdateCreateVm> GetDepartment(int id)
+    public async Task<DepartmentUpdateReadVm> GetDepartment(int id)
     {
         Department? department=await _departmentRepo.GetByIdAsync(id);
-        DepartmentUpdateCreateVm departmentGet=new DepartmentUpdateCreateVm()
+        DepartmentUpdateReadVm departmentGet=new DepartmentUpdateReadVm()
         {
             Id=department.Id,
             Name= department.Name,
-            IsDeleted= department.IsDeleted,
-            Createtime=department.CreateTime,
         };
         return departmentGet;
     }
-    public async Task<ICollection<DepartmentUpdateCreateVm>> GetAll()
+    public async Task<List<DepartmentUpdateReadVm>> GetAll()
     {
         List<Department> departments= await _departmentRepo.GetAllDepartmentsAsync();
-        List<DepartmentUpdateCreateVm> departmentsGetAll=departments.Select(d=> new DepartmentUpdateCreateVm
+        List<DepartmentUpdateReadVm> departmentsGetAll=departments.Select(d=> new DepartmentUpdateReadVm
         {
             Id=d.Id,
             Name= d.Name,
-            IsDeleted= d.IsDeleted,
-            Createtime = d.CreateTime,
+            DoctorCount=d.Doctors.Count,
         }).ToList();
         return departmentsGetAll;
     }
-    public async Task SoftDelete(DepartmentUpdateCreateVm departmentVm)
-    {
-        Department department=new Department()
-        {
-            Id=departmentVm.Id,
-            Name= departmentVm.Name,
-            IsDeleted= departmentVm.IsDeleted,
-            CreateTime=departmentVm.Createtime,
-            DeleteTime = DateTime.UtcNow.AddHours(4),
-        };
-        _departmentRepo.SoftDelete(department);
-        _departmentRepo.SaveChangeAsync();
-    }
-    public async Task Delete(DepartmentUpdateCreateVm departmentVm)
+    public async Task Delete(DepartmentUpdateReadVm departmentVm)
     {
         Department department = new Department()
         {
             Id = departmentVm.Id,
             Name = departmentVm.Name,
-            IsDeleted = departmentVm.IsDeleted,
-            CreateTime = departmentVm.Createtime,
         };
-        _departmentRepo.Delete(department);
-        _departmentRepo.SaveChangeAsync();
+       _departmentRepo.Delete(department);
+      await  _departmentRepo.SaveChangeAsync();
     }
     public async Task IsExsist(int id)
     {
@@ -94,11 +74,11 @@ public class DepartmentService(IDepartmentRepository departmentRepository) :IDep
             throw new Exception404();
         }
     }
-    public async Task<List<SelectListItem>> DepartmentSelectListItem(List<SelectListItem> selectLists)
+    public async Task<List<SelectListItem>> DepartmentSelectListItem()
     {
-        selectLists.Clear();
+        
         List<Department> departments =await _departmentRepo.GetAllDepartmentsAsync();
-        selectLists = departments.Select(x => new SelectListItem()
+        List<SelectListItem> selectLists = departments.Select(x => new SelectListItem()
         {
             Value = x.Id.ToString(),
             Text = x.Name,

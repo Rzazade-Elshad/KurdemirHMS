@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Kurdemir.Core.Models;
 
-public class Patient: BaseUser
+public class Patient :BaseUser
 {
     public string AppUserId {  get; set; }
-    AppUser AppUser { get; set; }
+    public AppUser AppUser { get; set; }
 }

@@ -15,6 +15,5 @@ public interface IGenericRepository<Tentity> where Tentity : BaseModel
     void Delete(Tentity entity);
     Task<bool> isExsist(int id);
     Task SaveChangeAsync();
-    void SoftDelete(Tentity entity);
     
 }

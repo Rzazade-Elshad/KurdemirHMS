@@ -8,57 +8,30 @@ using Kurdemir.DAL.Repositories.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Kurdemir.BL.Services.Implementations;
 
-public class DoctorService(IDoctorRepository doctorRepository , IAppUserRepository appUserRepository) :IDoctorService
+public class DoctorService(IDoctorRepository doctorRepository) : IDoctorService
 {
-    readonly IDoctorRepository _doctorRepository=doctorRepository;
-    readonly IAppUserRepository _appUserRepository=appUserRepository; 
-
-    public async Task<string> Register(DoctorCreateVm doctorCreate)
-    {
-        AppUser appUser = new AppUser()
-        {
-            UserName = doctorCreate.Username,
-            Email = doctorCreate.Email,
-            RoleName = "Doctor"
-        };
-
-        var Result = await _appUserRepository.CreateAsync(appUser, doctorCreate.Password);
-        if (!Result.Succeeded)
-        {
-            string errors = string.Empty;
-            foreach (var error in Result.Errors)
-            {
-                errors += error.Description + "\n";
-            }
-            return errors;
-        }
-
-        await _appUserRepository.AddtoRoleAsync(appUser, UserRoles.Operator.ToString());
-
-        doctorCreate.UserId = appUser.Id;
-
-        return "Succeeded";
-    }
-    public async Task Create(DoctorCreateVm doctorCreate)
+    readonly IDoctorRepository _doctorRepository = doctorRepository;
+    public async Task DoctorCreate(DoctorCreateVm doctorCreate)
     {
         if (!Enum.IsDefined(typeof(UserRoles), doctorCreate.Gender))
         {
             throw new Exception404();
         }
 
-         Doctor doctor = new Doctor()
+        Doctor doctor = new Doctor()
         {
             Firstname = doctorCreate.Firstname,
             Lastname = doctorCreate.Lastname,
             Gender = (Genders)doctorCreate.Gender,
             ImageUrl = doctorCreate.ImgUrl,
 
-            AppUserId=doctorCreate.UserId,
+            AppUserId = doctorCreate.UserId,
 
             DepartmentId = doctorCreate.DepartmentId,
 
@@ -66,5 +39,78 @@ public class DoctorService(IDoctorRepository doctorRepository , IAppUserReposito
         await _doctorRepository.CreateAsync(doctor);
         await _doctorRepository.SaveChangeAsync();
     }
+    public async Task<List<DoctorReadVm>> DoctorGetAll()
+    {
+        List<Doctor> doctors = await _doctorRepository.GetAllAsync();
+        List<DoctorReadVm> doctorReads = doctors.Select(o => new DoctorReadVm()
+        {
+            Id = o.Id,
+            ImgUrl = o.ImageUrl,
+            Firstname = o.Firstname,
+            Lastname = o.Lastname,
+            Gender = o.Gender.ToString(),
 
+            UserId = o.AppUserId,
+            Username = o.AppUser.UserName,
+            Email = o.AppUser.Email,
+            IsDelete=o.AppUser.IsDeleted,
+            DeleteTime = o.AppUser.DeleteTime,
+
+            DepartmentName=o.Department.Name,
+
+        }).ToList();
+        return doctorReads;
+    }
+    public async Task<DoctorUpdateVm> DoctorGet(int id)
+    {
+        Doctor? doctor = await _doctorRepository.GetByIdAsync(id);
+        DoctorUpdateVm doctorUpdateVm = new DoctorUpdateVm()
+        {
+            Id = id,
+            Firstname = doctor.Firstname,
+            Lastname = doctor.Lastname,
+            ImgUrl = doctor.ImageUrl,
+            Gender=(int)doctor.Gender,
+
+            UserId = doctor.AppUserId,
+            Uername=doctor.AppUser.UserName,
+            Email=doctor.AppUser.Email,
+
+            Departments=new(),
+            DepartmentId=doctor.Department.Id,
+
+        };
+        return doctorUpdateVm;
+
+    }
+    public async Task DoctorUpdate(DoctorUpdateVm updateVm)
+    {
+        Doctor doctor = new Doctor()
+        {
+            Id = updateVm.Id,
+            Firstname=updateVm.Firstname,
+            Lastname=updateVm.Lastname,
+            ImageUrl=updateVm.ImgUrl,
+            Gender=(Genders)updateVm.Gender,
+            AppUserId=updateVm.UserId,
+            DepartmentId=updateVm.DepartmentId,
+        };
+        _doctorRepository.Update(doctor);
+       await _doctorRepository.SaveChangeAsync();
+
+    }
+    public async Task IsExist(int id)
+    {
+        Doctor? doctor=await _doctorRepository.GetByIdAsync(id);
+        if(doctor == null)
+        {
+            throw new Exception404();
+        }
+    }
+    public async Task Delete(int id)
+    {
+        Doctor? doctor = await _doctorRepository.GetByIdAsync(id);
+        _doctorRepository.Delete(doctor);
+        await _doctorRepository.SaveChangeAsync();
+    }
 }

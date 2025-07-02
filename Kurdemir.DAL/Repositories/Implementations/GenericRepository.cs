@@ -43,11 +43,6 @@ public class GenericRepository<Tentity>(AppDbContext context) :
          await _dbcontext.SaveChangesAsync();
     }
 
-    public void SoftDelete(Tentity entity)
-    {
-        entity.IsDeleted = true;
-    }
-
     public void Update(Tentity entity)
     {
         _dbSet.Update(entity);

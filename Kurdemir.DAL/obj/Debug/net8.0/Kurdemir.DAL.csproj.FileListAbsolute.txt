@@ -9,6 +9,7 @@ C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemi
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.DAL.AssemblyInfoInputs.cache
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.DAL.AssemblyInfo.cs
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.DAL.csproj.CoreCompileInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.DAL.sourcelink.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.670EB207.Up2Date
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\Kurdemir.DAL.dll
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.DAL\obj\Debug\net8.0\refint\Kurdemir.DAL.dll

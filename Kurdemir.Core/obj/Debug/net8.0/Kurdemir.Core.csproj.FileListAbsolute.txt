@@ -6,6 +6,7 @@ C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemi
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.AssemblyInfoInputs.cache
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.AssemblyInfo.cs
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.csproj.CoreCompileInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.sourcelink.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.dll
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\refint\Kurdemir.Core.dll
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir.Core\obj\Debug\net8.0\Kurdemir.Core.pdb

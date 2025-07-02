@@ -10,4 +10,5 @@ namespace Kurdemir.Core.Models;
 public class Department :BaseModel
 {
     public string Name {  get; set; }
+    public List<Doctor> Doctors { get; set; }
 }

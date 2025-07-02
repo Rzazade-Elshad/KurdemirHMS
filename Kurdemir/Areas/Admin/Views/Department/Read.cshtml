@@ -1,0 +1,59 @@
+﻿@using Kurdemir.BL.ViewModels.DepartmetVMs
+@model List<DepartmentUpdateReadVm>
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+	<!-- Main Content -->
+	<div id="content">
+
+		<!-- Begin Page Content -->
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<h1 class="h3 mb-2 text-gray-800">Kurdemir Hospital Management System Admin</h1>
+			<p class="mb-4">Departments</p>
+
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+				<div class="card-header py-3 d-flex justify-content-between align-items-center">
+					<h6 class="m-0 font-weight-bold text-primary">Departments Table</h6>
+					<a class="btn btn-success" asp-area="admin" asp-controller="Department" asp-action="Create">+ Create</a>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Doctor Count</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (DepartmentUpdateReadVm department in Model)
+								{
+									<tr>
+										<td>@department.Id</td>
+										<td>@department.Name</td>
+										<td>@department.DoctorCount</td>
+										<td>
+											<a class="btn btn-primary btn-sm" asp-area="admin" asp-controller="Department" asp-action="Update" asp-route-id="@department.Id">Update</a>
+											<a class="btn btn-danger btn-sm" asp-area="admin" asp-controller="Department" asp-action="Delete" asp-route-id="@department.Id">Delete</a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container-fluid -->
+
+	</div>
+	<!-- End of Main Content -->
+</div>
+<!-- End of Content Wrapper -->

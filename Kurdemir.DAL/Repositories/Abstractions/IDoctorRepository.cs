@@ -9,5 +9,6 @@ namespace Kurdemir.DAL.Repositories.Abstractions
 {
     public interface IDoctorRepository :IGenericRepository<Doctor>
     {
+        Task<List<Doctor>> GetAllAsync();
     }
 }

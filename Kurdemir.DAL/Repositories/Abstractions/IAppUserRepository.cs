@@ -18,4 +18,6 @@ public interface IAppUserRepository
     Task SignInAsync(AppUser user, bool Remember);
     Task SignOutAsync();
     Task CreateRolesAsync(string role);
+    Task<AppUser?> FindByIdAsync(string id);
+    Task<IdentityResult> UpdateAsync(AppUser appUser);
 }

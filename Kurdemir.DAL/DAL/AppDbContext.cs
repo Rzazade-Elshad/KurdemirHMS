@@ -13,5 +13,4 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<Department> Departments { get; set; }
     public DbSet<Doctor> Doctors { get; set; }
     public DbSet<Patient> Patients { get; set; }
-    public DbSet<Operator> Operators { get; set; }
 }

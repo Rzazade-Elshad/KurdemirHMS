@@ -11,6 +11,7 @@ public interface IAccountService
 {
     Task<string> LoginAsync(LoginVm loginVm);
     Task Logout();
-    Task<string> RegisterAsync(RegisterPatientVm registerVm, int RoleValue);
-    Task PatientCreateAsync(RegisterPatientVm patientVm);
+    Task<string> RegisterAsync(RegisterVm registerVm,int Role);
+    Task<string> Update(UserUpdate update);
+    public Task<bool> SoftDeleteAsync(string userId);
 }

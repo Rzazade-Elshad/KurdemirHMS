@@ -8,9 +8,8 @@ namespace Kurdemir.Core.Enums
 {
     public enum UserRoles
     {
-        Patient,
         Doctor,
         Admin,
-        Operator
+        Patient
     }
 }

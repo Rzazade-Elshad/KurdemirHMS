@@ -57,4 +57,14 @@ public class AppUserRepository(UserManager<AppUser> userManager ,
     {
         await _roleManager.CreateAsync(new IdentityRole(role.ToString()));
     }
+
+    public async Task<AppUser?> FindByIdAsync(string id)
+    {
+       return await _userManager.FindByIdAsync(id);
+    }
+
+    public async Task<IdentityResult> UpdateAsync(AppUser appUser)
+    {
+        return await _userManager.UpdateAsync(appUser);
+    }
 }

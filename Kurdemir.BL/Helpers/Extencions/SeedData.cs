@@ -32,7 +32,7 @@ public static class SeedData
                     Email = "Admin@gmail.com",
                     RoleName = "Admin"
                 };
-                userManager.CreateAsync(appUser, "Admin123!.").Wait();
+                userManager.CreateAsync(appUser, "Admin123!").Wait();
                 userManager.AddToRoleAsync(appUser, nameof(UserRoles.Admin)).Wait();
             }
         }

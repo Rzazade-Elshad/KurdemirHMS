@@ -17,6 +17,6 @@ public class DepartmentRepository :GenericRepository<Department> ,IDepartmentRep
     }
     public async Task<List<Department>> GetAllDepartmentsAsync()
     {
-       return await _dbcontext.Departments.ToListAsync();
+       return await _dbcontext.Departments.Include(d=>d.Doctors).ToListAsync();
     }
 }

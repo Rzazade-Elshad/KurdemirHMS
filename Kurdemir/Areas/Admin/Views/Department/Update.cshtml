@@ -1,0 +1,20 @@
+﻿@using Kurdemir.BL.ViewModels.DepartmetVMs
+@model DepartmentUpdateReadVm
+<div class="container mt-4">
+    <p class="h4 mb-3">Update Department</p>
+
+    <form asp-action="Update" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-area="admin" asp-controller="Department" asp-action="read" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+

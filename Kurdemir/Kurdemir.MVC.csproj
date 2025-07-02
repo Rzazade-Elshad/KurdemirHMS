@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Kurdemir.BL\Kurdemir.BL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\Image\Doctor\" />
+  </ItemGroup>
+
 </Project>

@@ -14,6 +14,6 @@ public class Doctor : BaseUser
     public string AppUserId { get; set; }
     public int DepartmentId { get; set; }
 
-    AppUser AppUser { get; set; }
+    public AppUser AppUser { get; set; }
     public Department Department { get; set; }
 }

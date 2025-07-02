@@ -1,3 +1,6 @@
+using Kurdemir.BL.Helpers.Extencions;
+using Kurdemir.BL.Services.Abstractions;
+using Kurdemir.BL.Services.Implementations;
 using Kurdemir.Core.Models;
 using Kurdemir.DAL.DAL;
 using Kurdemir.DAL.Repositories.Abstractions;
@@ -16,14 +19,21 @@ builder.Services.AddIdentity<AppUser,IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<IAccountService,AccountService>();
+builder.Services.AddScoped<IDepartmentService,DepartmentService>();
+builder.Services.AddScoped<IDoctorService,DoctorService>();
+builder.Services.AddScoped<IPatientService,PatientService>();
+
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
-builder.Services.AddScoped<IOperatorRepository, OperatorRepository>();
 builder.Services.AddScoped<IAppUserRepository, AppUserRepository>();
 
 
+
 var app = builder.Build();
+
+app.UseUserSeed();
 
 app.UseHttpsRedirection();
 

@@ -1,0 +1,67 @@
+﻿@using Kurdemir.BL.ViewModels.MixViewModels;
+@model PatientRegisterVm
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <div class="p-5">
+                <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Create Patient Account</h1>
+                </div>
+
+                <form class="user" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="text" class="form-control form-control-user"
+                                   asp-for="Firstname" placeholder="First Name" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control form-control-user"
+                                   asp-for="Lastname" placeholder="Last Name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user"
+                               asp-for="Username" placeholder="Username" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user"
+                               asp-for="Email" placeholder="Email Address" />
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="password" class="form-control form-control-user"
+                                   asp-for="Password" placeholder="Password" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control form-control-user"
+                                   asp-for="ConfiConfrimPassword" placeholder="Confirm Password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select asp-for="Gender" class="form-control">
+                            <option value="">Select Gender</option>
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
+                        </select>
+                    </div>
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                        Register Patient
+                    </button>
+                </form>
+
+                <hr>
+
+                <div class="text-center">
+                    <a class="small" asp-controller="Account" asp-action="Login">Already have an account? Login!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
