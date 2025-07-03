@@ -19,4 +19,8 @@ public class DepartmentRepository :GenericRepository<Department> ,IDepartmentRep
     {
        return await _dbcontext.Departments.Include(d=>d.Doctors).ToListAsync();
     }
+    public async Task<Department?> GetByIdAsync(int id)
+    {
+        return await _dbcontext.Departments.AsNoTracking().FirstOrDefaultAsync();
+    }
 }

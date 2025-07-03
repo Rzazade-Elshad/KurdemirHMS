@@ -28,10 +28,7 @@ public class GenericRepository<Tentity>(AppDbContext context) :
          _dbSet.Remove(entity);
     }
 
-    public Task<Tentity?> GetByIdAsync(int id)
-    {
-        return _dbSet.AsNoTracking().FirstOrDefaultAsync();
-    }
+
 
     public async Task<bool> isExsist(int id)
     {

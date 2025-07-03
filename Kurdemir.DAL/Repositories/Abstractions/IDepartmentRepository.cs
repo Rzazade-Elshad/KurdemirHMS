@@ -10,5 +10,6 @@ namespace Kurdemir.DAL.Repositories.Abstractions;
 public interface IDepartmentRepository :IGenericRepository<Department>
 {
     public Task<List<Department>> GetAllDepartmentsAsync();
+    Task<Department?> GetByIdAsync(int id);
 
 }

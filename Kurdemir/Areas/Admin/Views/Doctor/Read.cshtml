@@ -27,7 +27,7 @@
 									<th>Id</th>
 									<th>Image</th>
 									<th>FullName</th>
-									<th>UserName-UserId</th>
+									<th>UserName</th>
 									<th>Gender</th>
 									<th>Email</th>
 									<th>Department</th>
@@ -39,24 +39,40 @@
 								{
 									<tr>
 										<td>@doctor.Id</td>
-										<td><img class="img-fluid" src="~/Upload/image/Doctor/@doctor.ImgUrl" alt=""></td>
+										<td><img class="img-fluid" src="~/Upload/image/Doctor/@doctor.ImgUrl" alt="" height="60" width="60"></td>
 										<td>@doctor.Firstname @doctor.Lastname</td>
-										<td>@doctor.Username - @doctor.UserId</td>
+										<td>@doctor.Username </td>
 										<td>@doctor.Gender</td>
-										<th>@doctor.Email</th>
-										<th>@doctor.DepartmentName</th>
+										<td>@doctor.Email</td>
+										<td>@doctor.DepartmentName</td>
 										@if (doctor.DeleteTime == null)
 										{
+
 											<th>@doctor.IsDelete - </th>
+
 										}
-										else{
+										else
+										{
 											<th>@doctor.IsDelete - @doctor.DeleteTime</th>
 										}
 										<td>
-												<a class="btn btn-primary btn-sm" asp-area="admin" asp-controller="Department" asp-action="Update" asp-route-id="@doctor.Id">Update</a>
-												<a class="btn btn-danger btn-sm" asp-area="admin" asp-controller="Department" asp-action="Delete" asp-route-id="@doctor.Id">Delete</a>
-											</td>
-										</tr>
+											<a class="btn btn-primary btn-sm" asp-area="admin" asp-controller="Doctor" asp-action="Update" asp-route-id="@doctor.Id">Update</a>
+											<a class="btn btn-danger btn-sm" asp-area="admin" asp-controller="Doctor" asp-action="Delete" asp-route-id="@doctor.Id">Delete</a>
+											@if (doctor.IsDelete)
+											{
+												<a class="btn btn-info btn-sm" asp-area="admin" asp-controller="Doctor" asp-action="SoftDelete" asp-route-id="@doctor.Id">
+													SoftDelete
+												</a>
+											}
+											else
+											{
+												<a class="btn btn-warning btn-sm" asp-area="admin" asp-controller="Doctor" asp-action="SoftDelete" asp-route-id="@doctor.Id">
+													SoftDelete
+												</a>
+
+											}
+										</td>
+									</tr>
 								}
 							</tbody>
 						</table>

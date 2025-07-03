@@ -14,4 +14,9 @@ public class DoctorRepository : GenericRepository<Doctor>, IDoctorRepository
     {
         return await _dbcontext.Doctors.Include(d=>d.AppUser).Include(d=>d.Department).ToListAsync();
     }
+
+    public Task<Doctor?> GetByIdAsync(int id)
+    {
+        return _dbcontext.Doctors.Include(d=>d.AppUser).Include(d=>d.Department).AsNoTracking().FirstOrDefaultAsync(d=>d.Id==id);
+    }
 }

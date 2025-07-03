@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9jdG9yXFJlYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Admin/Views/Doctor/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9jdG9yXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,36 +64,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctors/Views/Dashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yc1xWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctor/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctors/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yc1xWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctor/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctors/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yc1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctor/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctors/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yc1xWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Doctor/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRG9jdG9yXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patients/Views/Dashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudHNcVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patient/Views/Appointment/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudFxWaWV3c1xBcHBvaW50bWVudFxCb29raW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patients/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudHNcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patient/Views/Appointment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudFxWaWV3c1xBcHBvaW50bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patients/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudHNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patient/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudFxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patients/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudHNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patient/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Areas/Patient/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGF0aWVudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rzaza/Desktop/Doctor Lahiye/Kurdemir Hospital Management System/Kurdemir/Views/Account/Login.cshtml]

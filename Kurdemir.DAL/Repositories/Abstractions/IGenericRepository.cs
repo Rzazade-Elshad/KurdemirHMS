@@ -9,7 +9,6 @@ namespace Kurdemir.DAL.Repositories.Abstractions;
 
 public interface IGenericRepository<Tentity> where Tentity : BaseModel
 {
-    Task<Tentity?> GetByIdAsync(int id);
     Task CreateAsync(Tentity entity);
     void Update(Tentity entity);
     void Delete(Tentity entity);

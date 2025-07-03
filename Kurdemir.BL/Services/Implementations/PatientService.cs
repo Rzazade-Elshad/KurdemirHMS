@@ -30,4 +30,9 @@ public class PatientService(IPatientRepository patientRepository) :IPatientServi
         await _patientRepository.CreateAsync(patient);
         await _patientRepository.SaveChangeAsync();
     }
+
+    public async Task<int> GetIdByUserId(string userId)
+    {
+        return await _patientRepository.GetIdByUserId(userId);
+    }
 }

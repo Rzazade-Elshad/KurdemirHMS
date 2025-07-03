@@ -38,10 +38,20 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">SB Admin</div> 
             </div>
             <hr class="sidebar-divider my-0">
             <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="" asp-controller="home" asp-action="index">
+                    <span> KHMS  home</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="admin" asp-controller="Dashboard" asp-action="index">
+                    <span> KHMS Admin home</span>
+                </a>
+            </li>
             <li class="nav-item active">
                 <a class="nav-link" asp-area="admin" asp-controller="Department" asp-action="Read">
                     <i class="fas fa-fw fa-table"></i>

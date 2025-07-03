@@ -7593,6 +7593,50 @@
       "PackagePath": "staticwebassets\\Assets\\lib\\wow\\wow.min.js"
     },
     {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\43rriqb1.jqp.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\43rriqb1.jqp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\4ywungmj.utd.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\4ywungmj.utd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\bznn4bjn.5cj.png",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\bznn4bjn.5cj.png"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\jucm3fds.ggp.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\jucm3fds.ggp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\k14ficjy.oux.png",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\k14ficjy.oux.png"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\la0boj0n.xlr.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\la0boj0n.xlr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\n5zfzccj.dtz.webp",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\n5zfzccj.dtz.webp"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\rj4bi1gc.cna.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\rj4bi1gc.cna.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\rs5ldfap.jur.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\rs5ldfap.jur.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\ujkvuhdh.yxf.png",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\ujkvuhdh.yxf.png"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\zj2iuizw.1z0.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\zj2iuizw.1z0.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Kurdemir.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

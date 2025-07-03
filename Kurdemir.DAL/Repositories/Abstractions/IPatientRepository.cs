@@ -9,5 +9,7 @@ namespace Kurdemir.DAL.Repositories.Abstractions;
 
 public interface IPatientRepository:IGenericRepository<Patient>
 {
-
+    Task<Patient?> GetByIdAsync(int id);
+    Task<List<Patient>> GetAllPatientsAsync();
+    Task<int> GetIdByUserId(string userId);
 }

@@ -1,0 +1,72 @@
+﻿@using Kurdemir.BL.ViewModels.DoctorVMs
+@model DoctorUpdateVm
+
+<div class="container mt-4">
+    <h4 class="mb-4">Update Doctor</h4>
+
+    <form asp-action="Update" method="post" enctype="multipart/form-data">
+
+        @* Göstərilməyən əsas identifikator *@
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="UserId" />
+        <input type="hidden" asp-for="ImgUrl" />
+
+        <!-- Firstname -->
+        <div class="form-group">
+            <label asp-for="Firstname"></label>
+            <input asp-for="Firstname" class="form-control" />
+        </div>
+
+        <!-- Lastname -->
+        <div class="form-group">
+            <label asp-for="Lastname"></label>
+            <input asp-for="Lastname" class="form-control" />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label asp-for="Gender"></label>
+            <select asp-for="Gender" class="form-control">
+                <option value="0" selected="@Model.Gender == 0">Male</option>
+                <option value="1" selected="@Model.Gender == 1">Female</option>
+            </select>
+        </div>
+
+        <!-- Department -->
+        <div class="form-group">
+            <label asp-for="DepartmentId"></label>
+            <select asp-for="DepartmentId" asp-items="Model.Departments" class="form-control">
+                <option disabled>-- Select Department --</option>
+            </select>
+        </div>
+
+        <!-- Show current image -->
+        <div class="form-group">
+            <label>Current Image:</label><br />
+            <img src="@Url.Content("~/Upload/Image/Doctor/" + Model.ImgUrl)" width="150" class="mb-2" />
+        </div>
+
+        <!-- Upload new image -->
+        <div class="form-group">
+            <label asp-for="Image">New Image (optional)</label>
+            <input asp-for="Image" type="file" class="form-control-file" />
+        </div>
+
+        <!-- Username -->
+        <div class="form-group">
+            <label asp-for="Uername"></label>
+            <input asp-for="Uername" class="form-control" />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" type="email" />
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-action="read" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+

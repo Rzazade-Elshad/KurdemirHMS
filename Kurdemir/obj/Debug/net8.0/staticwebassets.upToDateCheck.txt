@@ -1896,3 +1896,14 @@ wwwroot\Assets\lib\waypoints\links.php
 wwwroot\Assets\lib\waypoints\waypoints.min.js
 wwwroot\Assets\lib\wow\wow.js
 wwwroot\Assets\lib\wow\wow.min.js
+wwwroot\Upload\Image\Doctor\43rriqb1.jqp.jpg
+wwwroot\Upload\Image\Doctor\4ywungmj.utd.jpg
+wwwroot\Upload\Image\Doctor\bznn4bjn.5cj.png
+wwwroot\Upload\Image\Doctor\jucm3fds.ggp.jpg
+wwwroot\Upload\Image\Doctor\k14ficjy.oux.png
+wwwroot\Upload\Image\Doctor\la0boj0n.xlr.jpg
+wwwroot\Upload\Image\Doctor\n5zfzccj.dtz.webp
+wwwroot\Upload\Image\Doctor\rj4bi1gc.cna.jpg
+wwwroot\Upload\Image\Doctor\rs5ldfap.jur.jpg
+wwwroot\Upload\Image\Doctor\ujkvuhdh.yxf.png
+wwwroot\Upload\Image\Doctor\zj2iuizw.1z0.jpg

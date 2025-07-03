@@ -17,7 +17,7 @@ public class DoctorRegister
     public int Gender { get; set; }
 
     public int DepartmentId { get; set; }
-    public List<SelectListItem> Departments { get; set; }
+    public List<SelectListItem>? Departments { get; set; }
 
     public string Username { get; set; }
     public string Password { get; set; }

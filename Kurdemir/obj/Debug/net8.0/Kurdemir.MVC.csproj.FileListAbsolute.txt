@@ -1,12 +1,3 @@
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.csproj.AssemblyReference.cache
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.AssemblyInfoInputs.cache
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.AssemblyInfo.cs
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.csproj.CoreCompileInputs.cache
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.RazorAssemblyInfo.cache
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.RazorAssemblyInfo.cs
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.sourcelink.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\appsettings.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\Kurdemir.MVC.staticwebassets.runtime.json
@@ -149,6 +140,16 @@ C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemi
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\Kurdemir.BL.pdb
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\Kurdemir.Core.pdb
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\bin\Debug\net8.0\Kurdemir.DAL.pdb
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.csproj.AssemblyReference.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.AssemblyInfoInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.AssemblyInfo.cs
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.csproj.CoreCompileInputs.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.RazorAssemblyInfo.cache
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.RazorAssemblyInfo.cs
+C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.sourcelink.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\scopedcss\bundle\Kurdemir.MVC.styles.css
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\staticwebassets.development.json
@@ -166,4 +167,3 @@ C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemi
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.pdb
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.genruntimeconfig.cache
 C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\ref\Kurdemir.MVC.dll
-C:\Users\rzaza\Desktop\Doctor Lahiye\Kurdemir Hospital Management System\Kurdemir\obj\Debug\net8.0\Kurdemir.MVC.MvcApplicationPartsAssemblyInfo.cs

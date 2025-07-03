@@ -7,13 +7,14 @@ using Kurdemir.DAL.Repositories.Abstractions;
 using Microsoft.AspNetCore.Identity;
 namespace Kurdemir.BL.Services.Implementations;
 
-public class AccountService(IAppUserRepository appUserRepo) :IAccountService
+public class AccountService(IAppUserRepository appUserRepo) : IAccountService
 {
-    readonly IAppUserRepository _appUserRepo=appUserRepo;
+    readonly IAppUserRepository _appUserRepo = appUserRepo;
 
-    public async Task<string> RegisterAsync(RegisterVm registerVm ,int Role)
+
+    public async Task<string> RegisterAsync(RegisterVm registerVm, int Role)
     {
-        if (!Enum.IsDefined(typeof(UserRoles),Role))
+        if (!Enum.IsDefined(typeof(UserRoles), Role))
         {
             throw new Exception404();
         }
@@ -21,8 +22,8 @@ public class AccountService(IAppUserRepository appUserRepo) :IAccountService
         AppUser appUser = new AppUser()
         {
             Email = registerVm.Email,
-            UserName=registerVm.Username,
-            RoleName=rolename.ToString(),
+            UserName = registerVm.Username,
+            RoleName = rolename.ToString(),
 
         };
         var Result = await _appUserRepo.CreateAsync(appUser, registerVm.Password);
@@ -66,19 +67,25 @@ public class AccountService(IAppUserRepository appUserRepo) :IAccountService
     }
     public async Task<bool> SoftDeleteAsync(string userId)
     {
-        AppUser? user =await _appUserRepo.FindByIdAsync(userId);
+        AppUser? user = await _appUserRepo.FindByIdAsync(userId);
 
         if (user == null)
             throw new Exception404();
-
-        user.IsDeleted = true;
-        user.DeleteTime = DateTime.UtcNow.AddHours(4); // Bakı vaxtına uyğun
+        if (user.IsDeleted == false)
+        {
+            user.IsDeleted = true;
+            user.DeleteTime = DateTime.UtcNow.AddHours(4); // Bakı vaxtına uyğun
+        }
+        else
+        {
+            user.IsDeleted = false;
+        }
 
         var result = await _appUserRepo.UpdateAsync(user);
 
         return result.Succeeded;
     }
-    public async Task<string> Update(UserUpdate update )
+    public async Task<string> Update(UserUpdate update)
     {
         AppUser? user = await _appUserRepo.FindByIdAsync(update.UserID);
 
@@ -86,8 +93,8 @@ public class AccountService(IAppUserRepository appUserRepo) :IAccountService
             throw new Exception404();
         user.Email = update.Email;
         user.UserName = update.UserName;
-        var Result= await _appUserRepo.UpdateAsync(user);
-        string errors=string.Empty;
+        var Result = await _appUserRepo.UpdateAsync(user);
+        string errors = string.Empty;
         if (!Result.Succeeded)
         {
             foreach (var error in Result.Errors)
@@ -96,6 +103,7 @@ public class AccountService(IAppUserRepository appUserRepo) :IAccountService
             }
             return errors;
         }
-        return "Succeeds";
+        return "Succeeded";
     }
+ 
 }
