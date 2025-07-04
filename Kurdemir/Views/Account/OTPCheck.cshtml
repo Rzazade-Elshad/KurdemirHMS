@@ -1,0 +1,13 @@
+﻿@using Kurdemir.BL.Helpers
+@model OTPCHECK
+
+<h2>OTP Kodunu Daxil Et</h2>
+
+<!-- ModelState xətalarını göstərmək üçün -->
+<form asp-action="OTPCheck" method="post">
+
+    <input asp-for="OTP" type="number" name="OTP" class="form-control" placeholder="OTP kodu daxil edin" required />
+    <span class="text-danger" asp-validation-for="OTP"></span>
+
+    <button type="submit" class="btn btn-primary mt-2">Yoxla</button>
+</form>

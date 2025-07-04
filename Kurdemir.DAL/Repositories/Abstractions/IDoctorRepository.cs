@@ -11,5 +11,6 @@ namespace Kurdemir.DAL.Repositories.Abstractions
     {
         Task<List<Doctor>> GetAllAsync();
         Task<Doctor?> GetByIdAsync(int id);
+        Task<int> GetIdByUserId(string userId);
     }
 }

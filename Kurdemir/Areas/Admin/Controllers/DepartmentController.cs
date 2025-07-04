@@ -1,10 +1,12 @@
 ﻿using Kurdemir.BL.Services.Abstractions;
 using Kurdemir.BL.ViewModels.DepartmetVMs;
+using Kurdemir.Core.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kurdemir.MVC.Areas.Admin.Controllers;
 
-[Area("Admin")]
+[Area("Admin"), Authorize(Roles = nameof(UserRoles.Admin))]
 public class DepartmentController(IDepartmentService departmentService) : Controller
 {
     readonly IDepartmentService _departmentService= departmentService;

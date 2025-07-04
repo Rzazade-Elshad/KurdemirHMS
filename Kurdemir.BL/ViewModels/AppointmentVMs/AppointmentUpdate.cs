@@ -12,4 +12,6 @@ public class AppointmentUpdate
     public int DoctorId {  get; set; }
     public int PatienId { get; set; }
     public DateTime DateTime { get; set; }
+    public List<DateTime>? DateTimes { get; set; }
+
 }

@@ -49,11 +49,26 @@
 			<div class="navbar-nav ms-auto p-4 p-lg-0">
 				<a asp-controller="Home" asp-action="index" class="nav-item nav-link active">Home</a>
 				<a asp-controller="Home" asp-action="about" class="nav-item nav-link">About</a>
-				<a asp-area="patient" asp-controller="Appointment" asp-action="index" class="nav-item nav-link active">Appointment</a>
 
-					</div>
+
+
+			</div>
 			@if (User.Identity.IsAuthenticated)
 			{
+				@if (User.IsInRole("Patient"))
+				{
+					
+					<div>
+						<a asp-area="Patient" asp-controller="Appointment" asp-action="Index" class="nav-item nav-link active">Appointment</a>
+					</div>
+				}
+				@if (User.IsInRole("Doctor"))
+				{
+
+					<div>
+						<a asp-area="Doctor" asp-controller="Appointment" asp-action="UserWaitingAppointments" class="nav-item nav-link active">Appointment</a>
+					</div>
+				}
 				@if (User.IsInRole("Admin"))
 				{
 					<div>
@@ -65,106 +80,108 @@
 			}
 			else
 			{
+				<a asp-controller="Account" asp-action="Login" class="nav-item nav-link active">Appointment</a>
+
 				<a asp-controller="Account" asp-action="Login" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login</a>
 			}
 		</div>
-		</nav>
-		<!-- Navbar End -->
-				@RenderBody()
+	</nav>
+	<!-- Navbar End -->
+	@RenderBody()
 
 
 
-		<!-- Footer Start -->
-		<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-			<div class="container py-5">
-				<div class="row g-4 align-items-center">
+	<!-- Footer Start -->
+	<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+		<div class="container py-5">
+			<div class="row g-4 align-items-center">
 
-					<!-- Sol tərəf - Contact -->
-					<div class="col-md-4">
+				<!-- Sol tərəf - Contact -->
+				<div class="col-md-4">
 
-						<!-- Ünvan link şəklində, yeni səhifədə xəritə açır -->
-						<p class="mb-2">
-							<i class="fa fa-map-marker-alt me-3"></i>
-							<a href="@("https://www.google.com/maps/place/Kürdəmir+Mərkəzi+Xəstəxanası/@40.3561373,48.1598998,17.37z")"
-							   target="_blank"
-							   class="text-light text-decoration-none">
-								Kürdəmir rayon Mərkəzi Xəstəxanası
-							</a>
-						</p>
+					<!-- Ünvan link şəklində, yeni səhifədə xəritə açır -->
+					<p class="mb-2">
+						<i class="fa fa-map-marker-alt me-3"></i>
+						<a href="@("https://www.google.com/maps/place/Kürdəmir+Mərkəzi+Xəstəxanası/@40.3561373,48.1598998,17.37z")"
+						   target="_blank"
+						   class="text-light text-decoration-none">
+							Kürdəmir rayon Mərkəzi Xəstəxanası
+						</a>
+					</p>
 
-						<!-- Nömrəyə klikləyəndə zəng edir -->
-						<p class="mb-2">
-							<i class="fa fa-phone-alt me-3"></i>
-							<a href="tel:+994107244221" class="text-light text-decoration-none">
-								+994 10 724 42 21
-							</a>
-						</p>
+					<!-- Nömrəyə klikləyəndə zəng edir -->
+					<p class="mb-2">
+						<i class="fa fa-phone-alt me-3"></i>
+						<a href="tel:+994107244221" class="text-light text-decoration-none">
+							+994 10 724 42 21
+						</a>
+					</p>
 
-						<!-- Email klikləyəndə e-poçt göndərmə pəncərəsi açır -->
-						<p class="mb-2">
-							<i class="fa fa-envelope me-3"></i>
-							<a href="mailto:rzazadelsad@gmail.com" class="text-light text-decoration-none">
-								rzazadeelshad@gmail.com
-							</a>
-						</p>
-						<small class="far fa-clock text-primary me-2"></small>
-						<small>Mon - Sun : 09:00 - 13:00, 14:00 - 18:00</small>
-					</div>
-
-					<!-- Orta hissə - Xəritə -->
-					<div class="col-md-4">
-						<div class="map-responsive">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.2390554624575!2d48.1593176!3d40.3556924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40397d2724c2be57%3A0x49e4dceb196a6911!2zS8O8cmRlbWlyIE3Dp3JrZXppIFjFn2VzdMOnZWhhbmFzxLE!5e0!3m2!1saz!2saz!4v1719308992943!5m2!1saz!2saz"
-									width="100%"
-									height="200"
-									style="border:0;"
-									allowfullscreen=""
-									loading="lazy">
-							</iframe>
-						</div>
-					</div>
-
-					<!-- Sağ tərəf - Sosial Şəbəkələr -->
-					<div class="col-md-4 d-flex justify-content-md-end pt-2">
-						<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-						<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-						<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-						<a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-					</div>
-
+					<!-- Email klikləyəndə e-poçt göndərmə pəncərəsi açır -->
+					<p class="mb-2">
+						<i class="fa fa-envelope me-3"></i>
+						<a href="mailto:rzazadelsad@gmail.com" class="text-light text-decoration-none">
+							rzazadeelshad@gmail.com
+						</a>
+					</p>
+					<small class="far fa-clock text-primary me-2"></small>
+					<small>Mon - Sun : 09:00 - 13:00, 14:00 - 18:00</small>
 				</div>
 
+				<!-- Orta hissə - Xəritə -->
+				<div class="col-md-4">
+					<div class="map-responsive">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.2390554624575!2d48.1593176!3d40.3556924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40397d2724c2be57%3A0x49e4dceb196a6911!2zS8O8cmRlbWlyIE3Dp3JrZXppIFjFn2VzdMOnZWhhbmFzxLE!5e0!3m2!1saz!2saz!4v1719308992943!5m2!1saz!2saz"
+								width="100%"
+								height="200"
+								style="border:0;"
+								allowfullscreen=""
+								loading="lazy">
+						</iframe>
+					</div>
+				</div>
+
+				<!-- Sağ tərəf - Sosial Şəbəkələr -->
+				<div class="col-md-4 d-flex justify-content-md-end pt-2">
+					<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+					<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+					<a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+					<a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+				</div>
 
 			</div>
-			<div class="container">
-				<div class="copyright">
-					<div class="row">
-						<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-							&copy; <a class="border-bottom" href="#">Kurdemir Hospital Manegement System</a>
-						</div>
+
+
+		</div>
+		<div class="container">
+			<div class="copyright">
+				<div class="row">
+					<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+						&copy; <a class="border-bottom" href="#">Kurdemir Hospital Manegement System</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Footer End -->
-		<!-- Back to Top -->
-		<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+	</div>
+	<!-- Footer End -->
+	<!-- Back to Top -->
+	<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-		<!-- JavaScript Libraries -->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="~/Assets/lib/wow/wow.min.js"></script>
-		<script src="~/Assets/lib/easing/easing.min.js"></script>
-		<script src="~/Assets/lib/waypoints/waypoints.min.js"></script>
-		<script src="~/Assets/lib/counterup/counterup.min.js"></script>
-		<script src="~/Assets/lib/owlcarousel/owl.carousel.min.js"></script>
-		<script src="~/Assets/lib/tempusdominus/js/moment.min.js"></script>
-		<script src="~/Assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
-		<script src="~/Assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	<!-- JavaScript Libraries -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/Assets/lib/wow/wow.min.js"></script>
+	<script src="~/Assets/lib/easing/easing.min.js"></script>
+	<script src="~/Assets/lib/waypoints/waypoints.min.js"></script>
+	<script src="~/Assets/lib/counterup/counterup.min.js"></script>
+	<script src="~/Assets/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="~/Assets/lib/tempusdominus/js/moment.min.js"></script>
+	<script src="~/Assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+	<script src="~/Assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-		<!-- Template Javascript -->
-		<script src="~/Assets/js/main.js"></script>
-	</body>
+	<!-- Template Javascript -->
+	<script src="~/Assets/js/main.js"></script>
+</body>
 
-	</html>
+</html>

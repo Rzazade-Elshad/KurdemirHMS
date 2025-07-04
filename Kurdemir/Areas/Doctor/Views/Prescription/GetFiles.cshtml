@@ -1,0 +1,42 @@
+﻿
+@using Kurdemir.BL.ViewModels.PatientFileVMs
+@model List<PatientFileRead>
+
+<h2>Patient Files</h2>
+
+@if (Model != null )
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Preview</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var file in Model)
+            {
+                <tr>
+                    <td>@file.Title</td>
+                    <td>
+                        <a href="~/Upload/PDF/Patient/@file.FileUrl" target="_blank" class="btn btn-info btn-sm">
+                            📄 Bax
+                        </a>
+                    </td>
+                    <td>
+                        <a href="~/Upload/PDF/Patient/@file.FileUrl" download class="btn btn-success btn-sm">
+                            ⬇ Yüklə
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-warning">
+        Fayl tapılmadı.
+    </div>
+}

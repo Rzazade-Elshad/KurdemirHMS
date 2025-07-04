@@ -11,5 +11,5 @@ public interface IAppointmentRepository :IGenericRepository<Appointment>
 {
      Task<List<Appointment>> GetAllAsync();
     Task<Appointment?> GetByIdAsync(int id);
-
+    Task TrackNoUpdate(Appointment appointment);
 }

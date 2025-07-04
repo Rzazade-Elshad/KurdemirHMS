@@ -2,7 +2,9 @@
 using Kurdemir.BL.Services.Abstractions;
 using Kurdemir.BL.ViewModels.AppointmentVMs;
 using Kurdemir.Core.Models;
+using Kurdemir.DAL.DAL;
 using Kurdemir.DAL.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +13,11 @@ using System.Threading.Tasks;
 
 namespace Kurdemir.BL.Services.Implementations;
 
-public class AppointmentService(IAppointmentRepository appointmentRepository) : IAppointmentService
+public class AppointmentService(IAppointmentRepository appointmentRepository,IDoctorService doctorService, IPatientService patient, AppDbContext dbContext) : IAppointmentService
 {
     readonly IAppointmentRepository _appointmentRepository = appointmentRepository;
 
-    public async Task<List<DateTime>> GetPossibleDatetime(int DoctorId,int PatienId)
+    public async Task<List<DateTime>> GetPossibleDatetime(int DoctorId, int PatienId)
     {
 
         List<DateTime> result = new();
@@ -72,6 +74,8 @@ public class AppointmentService(IAppointmentRepository appointmentRepository) : 
         List<AppointmentReadVm> readVm = appointments.Select(x => new AppointmentReadVm()
         {
             id = x.Id,
+            PatienId = x.PatientId,
+            DoctorId = x.DoctorId,
             DateTime = x.DateTime,
             DoctorFullName = x.Doctor.Firstname + " " + x.Doctor.Lastname,
             PatientFullName = x.Patient.Firstname + " " + x.Patient.Lastname,
@@ -87,7 +91,7 @@ public class AppointmentService(IAppointmentRepository appointmentRepository) : 
             id = appointment.Id,
             DateTime = appointment.DateTime,
             DoctorId = appointment.DoctorId,
-            PatienId=appointment.PatientId,
+            PatienId = appointment.PatientId,
             DoctorFullName = appointment.Doctor.Firstname + " " + appointment.Doctor.Lastname,
             PatientFullName = appointment.Patient.Firstname + " " + appointment.Patient.Lastname,
         };
@@ -96,7 +100,7 @@ public class AppointmentService(IAppointmentRepository appointmentRepository) : 
 
     public async Task isExist(int id)
     {
-        if (await _appointmentRepository.isExsist(id))
+        if (! await _appointmentRepository.isExsist(id))
         {
             throw new Exception404();
         }
@@ -111,14 +115,51 @@ public class AppointmentService(IAppointmentRepository appointmentRepository) : 
 
     public async Task Update(AppointmentUpdate updatevm)
     {
-        Appointment appointment=new Appointment()
+        var trackedEntity = dbContext.ChangeTracker.Entries<Appointment>()
+    .FirstOrDefault(e => e.Entity.Id == updatevm.id);
+
+        if (trackedEntity != null)
+            trackedEntity.State = EntityState.Detached;
+
+        Appointment appointment = new Appointment()
         {
-            Id=updatevm.id,
+            Id = updatevm.id,
             DateTime = updatevm.DateTime,
-            PatientId=updatevm.PatienId,
-            DoctorId=updatevm.DoctorId,
+            PatientId = updatevm.PatienId,
+            DoctorId = updatevm.DoctorId,
         };
-        _appointmentRepository.Update(appointment);
-        await _appointmentRepository.SaveChangeAsync();
+      await  _appointmentRepository.TrackNoUpdate(appointment);
+    }
+
+    public async Task<List<AppointmentReadVm>> GetPatientAppointments(string id)
+    {
+        var user = await patient.GetIdByUserId(id);
+        List<Appointment> appointments = await _appointmentRepository.GetAllAsync();
+        List<AppointmentReadVm> userappointments = appointments.Where(x => x.PatientId == user)
+            .Select(x=>new AppointmentReadVm {
+            DateTime =x.DateTime,
+            PatienId = x.PatientId,
+            id=x.Id,
+            DoctorFullName=x.Doctor.Firstname+" "+x.Doctor.Lastname,
+            DoctorId=x.PatientId,
+            PatientFullName=x.Patient.Firstname+" "+x.Patient.Lastname,
+            }).ToList();
+        return userappointments;
+    }
+    public async Task<List<AppointmentReadVm>> GetDoctorAppointments(string id)
+    {
+        var user = await doctorService.GetIdByUserId(id);
+        List<Appointment> appointments = await _appointmentRepository.GetAllAsync();
+        List<AppointmentReadVm> userappointments = appointments.Where(x => x.DoctorId == user)
+            .Select(x => new AppointmentReadVm
+            {
+                DateTime = x.DateTime,
+                PatienId = x.PatientId,
+                id = x.Id,
+                DoctorFullName = x.Doctor.Firstname + " " + x.Doctor.Lastname,
+                DoctorId = x.PatientId,
+                PatientFullName = x.Patient.Firstname + " " + x.Patient.Lastname,
+            }).ToList();
+        return userappointments;
     }
 }

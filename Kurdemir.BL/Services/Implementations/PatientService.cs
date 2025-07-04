@@ -6,6 +6,7 @@ using Kurdemir.BL.ViewModels.PatientVMs;
 using Kurdemir.Core.Enums;
 using Kurdemir.Core.Models;
 using Kurdemir.DAL.Repositories.Abstractions;
+using Kurdemir.DAL.Repositories.Implementations;
 
 namespace Kurdemir.BL.Services.Implementations;
 
@@ -13,6 +14,21 @@ public class PatientService(IPatientRepository patientRepository) :IPatientServi
 {
 
     readonly IPatientRepository _patientRepository = patientRepository;
+
+    public async Task<List<PatientReadVm>> GetAllAsync()
+    {
+        List<Patient> patients= await _patientRepository.GetAllPatientsAsync();
+        List<PatientReadVm> patientReads = patients.Select(x => new PatientReadVm()
+        {
+            Id = x.Id,
+            FirstName = x.Firstname,
+            LastName = x.Lastname,
+            Email = x.AppUser.Email,
+            Username = x.AppUser.UserName,
+            Gender = x.Gender.ToString(),
+        }).ToList();
+        return patientReads;
+    }
 
     public async Task PatientCreateAsync(PatientCreate patientVm)
     {
@@ -31,8 +47,17 @@ public class PatientService(IPatientRepository patientRepository) :IPatientServi
         await _patientRepository.SaveChangeAsync();
     }
 
+
     public async Task<int> GetIdByUserId(string userId)
     {
         return await _patientRepository.GetIdByUserId(userId);
+    }
+    public async Task IsExist(int id)
+    {
+        Patient? patient = await _patientRepository.GetByIdAsync(id);
+        if (patient == null)
+        {
+            throw new Exception404();
+        }
     }
 }

@@ -3,10 +3,10 @@ using Kurdemir.BL.Services.Abstractions;
 using Kurdemir.BL.Services.Implementations;
 using Kurdemir.Core.Models;
 using Kurdemir.DAL.DAL;
-using Kurdemir.DAL.Repositories.Abstractions;
-using Kurdemir.DAL.Repositories.Implementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Kurdemir.BL;
+using Kurdemir.BL.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,19 +19,12 @@ builder.Services.AddIdentity<AppUser,IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-builder.Services.AddScoped<IAccountService,AccountService>();
-builder.Services.AddScoped<IDepartmentService,DepartmentService>();
-builder.Services.AddScoped<IDoctorService,DoctorService>();
-builder.Services.AddScoped<IPatientService,PatientService>();
-builder.Services.AddScoped<IAppointmentRepository,AppointmentRepository>();
-
-builder.Services.AddScoped<IAppointmentService, AppointmentService>();
-builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
-builder.Services.AddScoped<IAppUserRepository, AppUserRepository>();
+builder.Services.AddServices();
+SmtpOptions options = new SmtpOptions();
+builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("Smtp"));
 
 
+builder.Services.AddServices();
 
 var app = builder.Build();
 
@@ -42,6 +35,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllerRoute(
             name: "areas",

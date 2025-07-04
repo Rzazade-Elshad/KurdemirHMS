@@ -1,0 +1,48 @@
+﻿@using Kurdemir.BL.ViewModels.AppointmentVMs
+
+@model AppointmentUpdate
+
+<div class="container mt-4">
+	<h3 class="mb-4 text-center">Select Appointment Time</h3>
+
+	@if (Model?.DateTimes != null && Model.DateTimes.Any())
+	{
+		var groupedDates = Model.DateTimes
+		.GroupBy(d => d.Date)
+		.OrderBy(g => g.Key);
+
+		foreach (var group in groupedDates)
+		{
+			<div class="card mb-3 shadow-sm">
+				<div class="card-body">
+					<h5 class="card-title">
+						@group.Key.ToString("dddd, dd.MM.")
+					</h5>
+					<div class="d-flex flex-wrap mt-2">
+						@foreach (var dt in group.OrderBy(d => d.TimeOfDay))
+						{
+							<form asp-action="Update" method="post" class="m-1">
+								<input type="hidden" name="id" value="@Model.id" />
+								<input type="hidden" name="DoctorId" value="@Model.DoctorId" />
+								<input type="hidden" name="PatienId" value="@Model.PatienId" />
+								<input type="hidden" name="DateTime" value="@dt.ToString("yyyy-MM-ddTHH:mm:ss")" />
+
+								<button type="submit" class="btn btn-outline-primary">
+									@dt.ToString("HH:mm")
+								</button>
+							</form>
+
+						}
+					</div>
+				</div>
+			</div>
+		}
+	}
+	else
+	{
+		<div class="alert alert-info text-center">
+			No available appointment times.
+		</div>
+	}
+</div>
+

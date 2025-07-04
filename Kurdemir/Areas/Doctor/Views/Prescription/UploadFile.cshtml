@@ -1,0 +1,23 @@
+﻿@model Kurdemir.BL.ViewModels.PatientFileVMs.PatientFileUpload
+
+<h2>Upload File for Patient ID: @Model.PatientId</h2>
+
+<form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="PatientId" />
+
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="File" class="control-label">Select PDF File (max 5MB)</label>
+        <input asp-for="File" type="file" class="form-control" accept="application/pdf" />
+    </div>
+    <div asp-validation-summary="All">
+
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+    <a asp-action="PatientAll" class="btn btn-secondary">Back to Patients</a>
+</form>
+

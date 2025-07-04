@@ -19,4 +19,13 @@ public class DoctorRepository : GenericRepository<Doctor>, IDoctorRepository
     {
         return _dbcontext.Doctors.Include(d=>d.AppUser).Include(d=>d.Department).AsNoTracking().FirstOrDefaultAsync(d=>d.Id==id);
     }
+    public async Task<int> GetIdByUserId(string userId)
+    {
+        Doctor? doctor = await _dbcontext.Doctors.AsNoTracking().FirstOrDefaultAsync(p => p.AppUserId == userId);
+        if (doctor != null)
+        {
+            return doctor.Id;
+        }
+        return 0;
+    }
 }

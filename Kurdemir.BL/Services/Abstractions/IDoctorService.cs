@@ -15,4 +15,6 @@ public interface IDoctorService
     Task Delete(int id);
     Task IsExist(int id);
     Task DoctorUpdate(DoctorUpdateVm updateVm);
+    Task<int> GetIdByUserId(string userId);
+
 }

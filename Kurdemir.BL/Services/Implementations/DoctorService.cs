@@ -113,4 +113,8 @@ public class DoctorService(IDoctorRepository doctorRepository) : IDoctorService
         _doctorRepository.Delete(doctor);
         await _doctorRepository.SaveChangeAsync();
     }
+    public async Task<int> GetIdByUserId(string userId)
+    {
+        return await _doctorRepository.GetIdByUserId(userId);
+    }
 }

@@ -7601,8 +7601,16 @@
       "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\4ywungmj.utd.jpg"
     },
     {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\b5yb2d3n.uwb.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\b5yb2d3n.uwb.jpg"
+    },
+    {
       "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\bznn4bjn.5cj.png",
       "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\bznn4bjn.5cj.png"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\dbyoiwbh.a13.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\dbyoiwbh.a13.jpg"
     },
     {
       "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\jucm3fds.ggp.jpg",
@@ -7615,6 +7623,10 @@
     {
       "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\la0boj0n.xlr.jpg",
       "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\la0boj0n.xlr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\lezyqp1e.am1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\lezyqp1e.am1.jpg"
     },
     {
       "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\n5zfzccj.dtz.webp",
@@ -7635,6 +7647,42 @@
     {
       "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\Image\\Doctor\\zj2iuizw.1z0.jpg",
       "PackagePath": "staticwebassets\\Upload\\Image\\Doctor\\zj2iuizw.1z0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\kaidbzvd.wf3.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\kaidbzvd.wf3.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\l1hufokb.2br.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\l1hufokb.2br.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\m0jev1pz.rck.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\m0jev1pz.rck.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\srydhcxp.aea.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\srydhcxp.aea.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\tk5tryn4.tkc.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\tk5tryn4.tkc.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\vyehdzgg.kkc.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\vyehdzgg.kkc.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\wpsd5cgy.gum.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\wpsd5cgy.gum.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\xcqeb3gh.20j.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\xcqeb3gh.20j.pdf"
+    },
+    {
+      "Id": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\wwwroot\\Upload\\PDF\\Patient\\y1ckgm5w.hln.pdf",
+      "PackagePath": "staticwebassets\\Upload\\PDF\\Patient\\y1ckgm5w.hln.pdf"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Kurdemir.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

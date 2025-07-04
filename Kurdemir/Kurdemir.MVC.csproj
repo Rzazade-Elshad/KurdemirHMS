@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Upload\Image\Doctor\" />
+    <Folder Include="wwwroot\Upload\PDF\Patient\" />
   </ItemGroup>
 
 </Project>

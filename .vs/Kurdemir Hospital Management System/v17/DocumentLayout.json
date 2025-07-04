@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{128AF20A-B2D9-46D8-B811-643E4FAC5A0B}|Kurdemir.BL\\Kurdemir.BL.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir.bl\\services\\implementations\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128AF20A-B2D9-46D8-B811-643E4FAC5A0B}|Kurdemir.BL\\Kurdemir.BL.csproj|solutionrelative:kurdemir.bl\\services\\implementations\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4705C2C-3A1A-4662-B557-C6FFFD65A85F}|Kurdemir\\Kurdemir.MVC.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir\\areas\\patient\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4705C2C-3A1A-4662-B557-C6FFFD65A85F}|Kurdemir\\Kurdemir.MVC.csproj|solutionrelative:kurdemir\\areas\\patient\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4705C2C-3A1A-4662-B557-C6FFFD65A85F}|Kurdemir\\Kurdemir.MVC.csproj|c:\\users\\rzaza\\desktop\\doctor lahiye\\kurdemir hospital management system\\kurdemir\\areas\\patient\\views\\appointment\\booking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C4705C2C-3A1A-4662-B557-C6FFFD65A85F}|Kurdemir\\Kurdemir.MVC.csproj|solutionrelative:kurdemir\\areas\\patient\\views\\appointment\\booking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppointmentService.cs",
-              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.BL\\Services\\Implementations\\AppointmentService.cs",
-              "RelativeDocumentMoniker": "Kurdemir.BL\\Services\\Implementations\\AppointmentService.cs",
-              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir.BL\\Services\\Implementations\\AppointmentService.cs",
-              "RelativeToolTip": "Kurdemir.BL\\Services\\Implementations\\AppointmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T09:50:15.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Booking.cshtml",
-              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\Areas\\Patient\\Views\\Appointment\\Booking.cshtml",
-              "RelativeDocumentMoniker": "Kurdemir\\Areas\\Patient\\Views\\Appointment\\Booking.cshtml",
-              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\Areas\\Patient\\Views\\Appointment\\Booking.cshtml",
-              "RelativeToolTip": "Kurdemir\\Areas\\Patient\\Views\\Appointment\\Booking.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T09:07:01.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppointmentController.cs",
-              "DocumentMoniker": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\Areas\\Patient\\Controllers\\AppointmentController.cs",
-              "RelativeDocumentMoniker": "Kurdemir\\Areas\\Patient\\Controllers\\AppointmentController.cs",
-              "ToolTip": "C:\\Users\\rzaza\\Desktop\\Doctor Lahiye\\Kurdemir Hospital Management System\\Kurdemir\\Areas\\Patient\\Controllers\\AppointmentController.cs",
-              "RelativeToolTip": "Kurdemir\\Areas\\Patient\\Controllers\\AppointmentController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T23:02:52.942Z",
-              "EditorCaption": ""
             }
           ]
         }

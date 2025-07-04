@@ -25,4 +25,12 @@ public class AppointmentRepository : GenericRepository<Appointment>, IAppointmen
     {
         return await _dbcontext.Appointments.Include(a => a.Doctor).Include(a => a.Patient).AsNoTracking().FirstOrDefaultAsync(a=>a.Id==id);
     }
+    public async Task TrackNoUpdate(Appointment appointment)
+    {
+
+
+        _dbcontext.Attach(appointment);
+        _dbcontext.Entry(appointment).State = EntityState.Modified;
+        await _dbcontext.SaveChangesAsync();
+    }
 }

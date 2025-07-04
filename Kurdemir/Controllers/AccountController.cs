@@ -1,13 +1,18 @@
 ﻿using AspNetCoreGeneratedDocument;
+using Kurdemir.BL.ExternalServices.Abstractions;
+using Kurdemir.BL.Helpers;
 using Kurdemir.BL.Services.Abstractions;
 using Kurdemir.BL.ViewModels.AccountVMs;
 using Kurdemir.BL.ViewModels.MixViewModels;
 using Kurdemir.BL.ViewModels.PatientVMs;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Runtime.CompilerServices;
+using static System.Net.WebRequestMethods;
 
 namespace Kurdemir.MVC.Controllers
 {
-    public class AccountController(IAccountService accountService ,IPatientService patientService) : Controller
+    public class AccountController(IAccountService accountService ,IPatientService patientService,IEmailService _emailService) : Controller
     {
         readonly IAccountService _accountService = accountService;
         readonly IPatientService _patientService = patientService;
@@ -15,7 +20,7 @@ namespace Kurdemir.MVC.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            return View();
+            return View(new PatientRegisterVm());
         }
 
         [HttpPost]
@@ -34,7 +39,7 @@ namespace Kurdemir.MVC.Controllers
             string Result= string.Empty;
             try
             {
-            Result=await _accountService.RegisterAsync(registerVm,2);
+              Result=await _accountService.RegisterAsync(registerVm,2);
 
             }
             catch (Exception)
@@ -45,7 +50,7 @@ namespace Kurdemir.MVC.Controllers
             if(Result != "Succeeded")
             {
                 ModelState.AddModelError(string.Empty, Result);
-                return View(registerVm);
+                return View(registerPatientVm);
             }
 
             PatientCreate patient = new PatientCreate()
@@ -63,7 +68,8 @@ namespace Kurdemir.MVC.Controllers
             {
                 return RedirectToAction("View404","home");
             }
-            return RedirectToAction(nameof(Index), "home");
+
+            return RedirectToAction(nameof(OTPCHECK), new { email = registerVm.Email });
         }
 
         [HttpGet]
@@ -88,6 +94,45 @@ namespace Kurdemir.MVC.Controllers
             return RedirectToAction(nameof(Index),"home");
 
         }
+        [HttpGet]
+        public async Task<IActionResult> OTPCheck(string email)
+        {
+            Random random = new Random();
+            int a = random.Next(100000, 999999);
+            _emailService.SendEmailConfirmation(email,"KURDEMIR HOSPITAL",a);
+            CookieOptions options = new CookieOptions
+            {
+                Expires = DateTimeOffset.Now.AddMinutes(5),
+                HttpOnly = true
+            };
+
+            Response.Cookies.Append("OTP", a.ToString(), options);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult OTPCheck(OTPCHECK? oTPCHECK)
+        {
+            Request.Cookies.TryGetValue("OTP", out string? otpValue);
+             int.TryParse(otpValue, out int security);
+            if (otpValue == null )
+            {
+                ModelState.AddModelError("OTP","Dogrulama kodu yanlisdir ve ya muddeti bitib");
+            }
+            if (security!= oTPCHECK.OTP)
+            {
+                ModelState.AddModelError("OTP", "Dogrulama kodu yanlisdir ve ya muddeti bitib");
+            }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+          
+
+
+
+            return RedirectToAction("Login");
+        }
+
 
         public IActionResult Logout()
         {

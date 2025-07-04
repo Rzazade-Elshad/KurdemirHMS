@@ -5,12 +5,16 @@ using Kurdemir.BL.ViewModels.AccountVMs;
 using Kurdemir.BL.ViewModels.DoctorVMs;
 using Kurdemir.BL.ViewModels.MixViewModels;
 using Kurdemir.BL.ViewModels.PatientVMs;
+using Kurdemir.Core.Enums;
 using Kurdemir.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using System.Numerics;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Kurdemir.MVC.Areas.Admin.Controllers;
-[Area("Admin")]
+[Area("Admin"), Authorize(Roles = nameof(UserRoles.Admin))]
 public class DoctorController(IDoctorService doctorService,
     IDepartmentService departmentService,
     IWebHostEnvironment webHost,
@@ -68,7 +72,7 @@ public class DoctorController(IDoctorService doctorService,
         string Result = string.Empty;
         try
         {
-            Result = await _accountService.RegisterAsync(registerVm, 1);
+            Result = await _accountService.RegisterAsync(registerVm, 0);
 
         }
         catch (Exception)
@@ -181,6 +185,8 @@ public class DoctorController(IDoctorService doctorService,
         {
             return RedirectToAction("View404", "Dashboard");
         }
+        DoctorUpdateVm doctorRead = await _doctorService.DoctorGet(id);
+        File_Extencion.Delete(_webHostEnvironment.WebRootPath, "Upload", "Image", "Doctor", doctorRead.ImgUrl);
         await _doctorService.Delete(id);
         return RedirectToAction("read");
     }

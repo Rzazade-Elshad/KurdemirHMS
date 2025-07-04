@@ -42,12 +42,26 @@
                 </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" asp-area="patient" asp-controller="Appointment" asp-action="index">
+                <a class="nav-link" asp-area="Patient" asp-controller="Appointment" asp-action="index">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Departments</span>
+                    <span>Appointment</span>
                 </a>
             </li>
-
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="Patient" asp-controller="Appointment" asp-action="UserWaitingAppointments">
+                    <span>Waitng</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="Patient" asp-controller="Appointment" asp-action="UserAppointmentsHistory">
+                    <span>History</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="Patient" asp-controller="Prescription" asp-action="GetFiles">
+                    <span>My Files</span>
+                </a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

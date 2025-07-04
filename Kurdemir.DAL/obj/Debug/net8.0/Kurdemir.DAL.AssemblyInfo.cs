@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kurdemir.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c02d58585efea46ce5aaf8346fd1e41b7d04e03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b77c88a4fbf733fb71289bc5cd1bdba0035f48b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kurdemir.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kurdemir.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

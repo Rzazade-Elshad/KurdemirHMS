@@ -11,4 +11,7 @@ public class Patient :BaseUser
 {
     public string AppUserId {  get; set; }
     public AppUser AppUser { get; set; }
+    public IEnumerable<Appointment> Appointments { get; set; }
+    public List<PatientFile>? PatientFiles { get; set; }
+
 }

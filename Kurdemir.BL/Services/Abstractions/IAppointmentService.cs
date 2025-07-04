@@ -16,4 +16,6 @@ public interface IAppointmentService
     Task Delete(int id);
     Task Update(AppointmentUpdate updatevm);
     Task<List<DateTime>> GetPossibleDatetime(int DoctorId, int PatienId);
+    Task<List<AppointmentReadVm>> GetPatientAppointments(string id);
+    Task<List<AppointmentReadVm>> GetDoctorAppointments(string id);
 }
